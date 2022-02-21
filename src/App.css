@@ -45,6 +45,9 @@ p {
 .d__flex {
   display: flex;
 }
+.d__none {
+  display: none;
+}
 .align__items__center {
   align-items: center;
 }
