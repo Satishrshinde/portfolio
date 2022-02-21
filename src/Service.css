@@ -43,3 +43,8 @@ h1.service__text {
 p.service__text.p__color {
   margin-bottom: 0;
 }
+@media only screen and (max-width: 1024px) {
+  .service__box {
+    padding: 32px !important;
+  }
+}
