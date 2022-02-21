@@ -10,7 +10,7 @@ const Project = () => {
     <div className="project component__space" id="Portfolio">
       <div className="heading">
         <h1 className="heading">My Latest Projects</h1>
-        <p className="heading p__color"> THis is the section about my services</p>
+        <p className="heading p__color"> This is the section about my services</p>
         <p className="heading p__color"> and this also are my services</p>
       </div>
       <div className="container">
@@ -24,10 +24,10 @@ const Project = () => {
               </div>
             </div>
             <div className="infoText">
-              <h3>Project Details</h3>
               <h3 className="project__text">Name : TODO Application</h3>
               <div className="d__flex align__items__center">
-                <h3>Live Link : </h3>
+                <h4>Live Link : </h4>
+                &nbsp;
                 <a href="https://react-app-basic-32.herokuapp.com/todoapp" className="linkText">
                   Click here
                 </a>
@@ -43,10 +43,10 @@ const Project = () => {
               </div>
             </div>
             <div className="infoText">
-              <h3>Project Details</h3>
               <h3 className="project__text">Name : Grocery Application</h3>
               <div className="d__flex align__items__center">
-                <h3>Live Link :</h3>
+                <h4>Live Link : </h4>
+                &nbsp;
                 <a href="https://react-app-basic-32.herokuapp.com/grocery" className="linkText">
                   Click here
                 </a>
@@ -62,10 +62,10 @@ const Project = () => {
               </div>
             </div>
             <div className="infoText">
-              <h3>Project Details</h3>
               <h3 className="project__text">Name : Clothing Application</h3>
               <div className="d__flex align__items__center">
-                <h3>Live Link :</h3>
+                <h4>Live Link : </h4>
+                &nbsp;
                 <a href="https://react-app-basic-32.herokuapp.com/" className="linkText">
                   Click here
                 </a>

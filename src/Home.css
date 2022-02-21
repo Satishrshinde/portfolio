@@ -8,7 +8,7 @@
 li.nav__items {
   color: white;
   font-size: 18px;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
 }
 .home__content {
   padding: 125px 0px;
@@ -64,6 +64,12 @@ svg.bi.bi-justify.white.pointer {
   z-index: 2;
   flex: 1;
 }
+.sidebar {
+  display: none;
+}
+.toggle__menu {
+  display: none;
+}
 ul.sidebar.d__flex {
   flex-wrap: wrap;
   height: 100%;
@@ -79,6 +85,12 @@ li.sideNavbar {
   padding: 25px 30px;
 }
 @media only screen and (max-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+  .toggle__menu {
+    display: block;
+  }
   .header {
     justify-content: space-between;
   }

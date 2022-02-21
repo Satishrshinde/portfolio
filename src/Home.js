@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./Home.css";
-import logo from "./img/logo.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
 const Home = () => {
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
     header.classList.toggle("active", window.scrollY > 0);
   });
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   return (
     <div className="home" id="Home">
       <div className="home__bg">
@@ -18,21 +19,21 @@ const Home = () => {
           </div>
           <div className="navigation pxy__30">
             <ul className="navbar d__flex">
-              <a href="#Home">
+              <AnchorLink href="#Home">
                 <li className="nav__items mx__15">Home</li>
-              </a>
-              <a href="#About">
+              </AnchorLink>
+              <AnchorLink offset="120" href="#About">
                 <li className="nav__items mx__15">About</li>
-              </a>
-              <a href="#Service">
+              </AnchorLink>
+              {/* <AnchorLink href="#Service">
                 <li className="nav__items mx__15">Service</li>
-              </a>
-              <a href="#Portfolio ">
+              </AnchorLink> */}
+              <AnchorLink href="#Portfolio">
                 <li className="nav__items mx__15">Portfolio</li>
-              </a>
-              <a href="#Contact">
+              </AnchorLink>
+              <AnchorLink href="#Contact">
                 <li className="nav__items mx__15">Contact</li>
-              </a>
+              </AnchorLink>
             </ul>
           </div>
           <div className="toggle__menu">
@@ -55,19 +56,19 @@ const Home = () => {
             <div className="sideNavbar">
               <ul className="sidebar d__flex">
                 <li className="sideNavbar">
-                  <a href="Home">Home</a>
+                  <AnchorLink href="Home">Home</AnchorLink>
                 </li>
                 <li className="sideNavbar">
-                  <a href="About">About</a>
+                  <AnchorLink href="About">About</AnchorLink>
+                </li>
+                {/* <li className="sideNavbar">
+                  <AnchorLink href="Service">Service</AnchorLink>
+                </li> */}
+                <li className="sideNavbar">
+                  <AnchorLink href="Portfolio">Portfolio</AnchorLink>
                 </li>
                 <li className="sideNavbar">
-                  <a href="Service">Service</a>
-                </li>
-                <li className="sideNavbar">
-                  <a href="Portfolio">Portfolio</a>
-                </li>
-                <li className="sideNavbar">
-                  <a href="Contact">Contact</a>
+                  <AnchorLink href="Contact">Contact</AnchorLink>
                 </li>
               </ul>
             </div>

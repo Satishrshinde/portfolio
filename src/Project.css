@@ -60,6 +60,9 @@ h4.project__text {
 .infoText {
   margin-top: 15px;
 }
+.infoText h3 {
+  font-size: 24px;
+}
 .linkText {
   color: #f9004d;
 }
