@@ -3,7 +3,6 @@ import "./Project.css";
 import project1 from "./img/todoApp.png";
 import project2 from "./img/clothingApp2.png";
 import project3 from "./img/groceryApp2.png";
-import project4 from "./img/portfolio-4.jpg";
 
 const Project = () => {
   return (

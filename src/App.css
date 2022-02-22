@@ -33,7 +33,7 @@ span {
   display: block;
 }
 .errorMessage {
-  border: 2px solid red;
+  border: 1px solid red !important ;
 }
 p {
   font-size: 16px;

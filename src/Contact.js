@@ -1,10 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import contactImg from "./img/satish.jpeg";
-
-// TODO  ==> Add real email submit functionality and API call
-// reference => https://mailtrap.io/blog/react-contact-form/#Using-Expressjs-Nodemailer
 
 function Contact() {
   const [name, setName] = useState("");
@@ -13,8 +10,38 @@ function Contact() {
   const [nameErr, setNameErr] = useState(false);
   const [emailErr, setEmailErr] = useState(false);
   const [messageErr, setMessageErr] = useState(false);
+  const form = useRef();
+  const [result, showResult] = useState(false);
+  const Result = () => {
+    return (
+      <p className="white">Your message has been successfully sent.I will contact you soon.</p>
+    );
+  };
+  const sendEmail = () => {
+    emailjs
+      .sendForm("service_hkrb72q", "template_j2qaxzc", form.current, "user_4pX7VP9aElVXjSM3cfOKf")
+      .then(
+        result => {
+          showResult(true);
+          setTimeout(function () {
+            showResult(false);
+            setName("");
+            setEmail("");
+            setMessage("");
+          }, 3000);
+        },
+        error => {
+          console.log(error.text);
+        }
+      );
+  };
+  function validateEmail(email) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault();
     if (name === "") {
       setNameErr(true);
     } else {
@@ -36,16 +63,11 @@ function Contact() {
     } else {
       setEmailErr(false);
     }
-    if (name !== "" && email !== "" && email === isValidEmail && message !== "") {
-      //api
+    if (name !== "" && isValidEmail && message !== "") {
+      sendEmail();
     }
   }
-  function validateEmail(email) {
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  }
 
-  //
   return (
     <div className="contact component__space" id="Contact">
       <div className="row">
@@ -54,13 +76,18 @@ function Contact() {
             <div className="contact__meta">
               <h1 className="hire__text">Hire Me</h1>
               <p className="hire__text white">
-                I am available for freelance work.Connenct with me via phone:
+                I’m interested in freelance opportunities especially ambitious or large projects.
+                However, if you have other request or question, don’t hesitate to use the form
               </p>
               <p className="hire__text white">
-                <strong>7507695758</strong> or email <strong>satishrshinde2014@gmail.com</strong>
+                or Connenct with me via phone: <strong>7507695758</strong>
+              </p>
+              <p className="hire__text white">
+                or email <strong>satishrshinde2014@gmail.com</strong>
               </p>
             </div>
-            <div className="input__box">
+
+            <form ref={form} className="input__box">
               <input
                 type="text"
                 className={`contact name ${nameErr ? "errorMessage" : ""}`}
@@ -79,17 +106,17 @@ function Contact() {
               {emailErr && <span className="sweet">email should be valid</span>}
               <textarea
                 name="message"
-                className={`contact message ${messageErr ? "errorMessage" : ""}`}
-                id="message"
+                className={`message ${messageErr ? "errorMessage" : ""}`}
                 placeholder="Write Your Message"
                 value={message}
                 onChange={event => setMessage(event.target.value)}
               />
               {messageErr && <span className="sweet">message should not be empty</span>}
-              <button className="btn contact pointer" type="submit" onClick={handleSubmit}>
+              <button className="btn contact pointer" onClick={handleSubmit}>
                 Submit
               </button>
-            </div>
+              <div className="row">{result ? <Result /> : null}</div>
+            </form>
           </div>
         </div>
         <div className="col__2">
