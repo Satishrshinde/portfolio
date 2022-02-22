@@ -77,12 +77,10 @@ const About = () => {
                   </svg>
                 </a>
                 <div className="about__button d__flex align__items__center">
-                  <button
-                    className="sweet pointer btn"
-                    href={require("./media/Satish_Shinde.pdf")}
-                    download="Profile_Satish_Shinde"
-                  >
-                    <a>Download CV</a>
+                  <button className="sweet pointer btn" download="Profile_Satish_Shinde">
+                    <a target="_blank" rel="noreferrer" href={require("./media/Satish_Shinde.pdf")}>
+                      Download CV
+                    </a>
                   </button>
                 </div>
               </div>
