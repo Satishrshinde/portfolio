@@ -28,7 +28,12 @@ const Project = () => {
               <div className="d__flex align__items__center">
                 <h4>Live Link : </h4>
                 &nbsp;
-                <a href="https://react-app-basic-32.herokuapp.com/todoapp" className="linkText">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://react-app-basic-32.herokuapp.com/todoapp"
+                  className="linkText"
+                >
                   Click here
                 </a>
               </div>
@@ -47,7 +52,12 @@ const Project = () => {
               <div className="d__flex align__items__center">
                 <h4>Live Link : </h4>
                 &nbsp;
-                <a href="https://react-app-basic-32.herokuapp.com/grocery" className="linkText">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://react-app-basic-32.herokuapp.com/grocery"
+                  className="linkText"
+                >
                   Click here
                 </a>
               </div>
@@ -66,14 +76,19 @@ const Project = () => {
               <div className="d__flex align__items__center">
                 <h4>Live Link : </h4>
                 &nbsp;
-                <a href="https://react-app-basic-32.herokuapp.com/" className="linkText">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://react-app-basic-32.herokuapp.com/"
+                  className="linkText"
+                >
                   Click here
                 </a>
               </div>
             </div>
           </div>
           <div className="view__more__btn d__flex align__items__center justify__content__center pxy__30">
-            <button className="view__more pointer btn">View More</button>
+            {/* <button className="view__more pointer btn">View More</button> */}
           </div>
         </div>
       </div>

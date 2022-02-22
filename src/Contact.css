@@ -20,7 +20,7 @@ input.contact {
   transition: all 0.3s ease;
   height: 50px;
   line-height: 46px;
-  margin: 20px 0px;
+  margin: 15px 0px;
   outline: none;
   color: #fff;
   font-size: 15px;
@@ -28,6 +28,13 @@ input.contact {
   background: none;
   border: 2px solid hsla(0, 0%, 100%, 0.2);
 }
+input.errorMessage {
+  border: 1px solid red;
+}
+textarea.errorMessage {
+  border: 1px solid red;
+}
+
 textarea#message {
   height: 120px;
   background: none;
