@@ -32,6 +32,9 @@ li {
 span {
   display: block;
 }
+.errorMessage {
+  border: 2px solid red;
+}
 p {
   font-size: 16px;
   font-family: Poppins, sans-serif;
@@ -132,7 +135,6 @@ button.btn {
   letter-spacing: 2px;
   transition: 0.4s all ease;
   height: 50px;
-  width: 180px;
   margin: 0px 10px;
 }
 .p__color {
