@@ -43,7 +43,7 @@ const Home = () => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-justify white pointer"
+              className="bi bi-justify white pointer"
               viewBox="0 0 16 16"
             >
               <path
