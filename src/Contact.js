@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import contactImg from "./img/satish.jpeg";
@@ -23,7 +22,6 @@ function Contact() {
       .sendForm("service_hkrb72q", "template_j2qaxzc", form.current, "user_4pX7VP9aElVXjSM3cfOKf")
       .then(
         result => {
-          console.log(result.text);
           showResult(true);
           setTimeout(function () {
             showResult(false);
@@ -70,7 +68,6 @@ function Contact() {
     }
   }
 
-  //
   return (
     <div className="contact component__space" id="Contact">
       <div className="row">
