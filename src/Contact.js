@@ -3,6 +3,9 @@ import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import contactImg from "./img/satish.jpeg";
 
+// add loader after submit action
+// or add processing state for button
+// add recaptcha to contact form => https://www.emailjs.com/docs/user-guide/adding-captcha-verification/
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -80,7 +83,7 @@ function Contact() {
                 However, if you have other request or question, don’t hesitate to use the form
               </p>
               <p className="hire__text white">
-                or Connenct with me via phone: <strong>7507695758</strong>
+                or Connect with me via phone: <strong>7507695758</strong>
               </p>
               <p className="hire__text white">
                 or email <strong>satishrshinde2014@gmail.com</strong>
@@ -92,12 +95,14 @@ function Contact() {
                 type="text"
                 className={`contact name ${nameErr ? "errorMessage" : ""}`}
                 placeholder="Your Name"
+                name="user_name"
                 value={name}
                 onChange={event => setName(event.target.value)}
               />
               {nameErr && <span className="sweet">Name should not be empty</span>}
               <input
                 type="text"
+                name="user_email"
                 className={`contact email ${emailErr ? "errorMessage" : ""}`}
                 placeholder="Your email"
                 value={email}
