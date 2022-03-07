@@ -31,6 +31,7 @@ function Contact() {
           setTimeout(function () {
             showResult(false);
             setName("");
+            setMobileNumber("");
             setEmail("");
             setMessage("");
           }, 3000);
