@@ -73,7 +73,7 @@ function Contact() {
     } else {
       setEmailErr(false);
     }
-    if (name !== "" && isValidEmail && message !== "") {
+    if (name !== "" && mobileNumber !== "" && isValidEmail && message !== "") {
       sendEmail();
     }
   }
