@@ -8,9 +8,11 @@ import contactImg from "./img/satish.jpeg";
 // add recaptcha to contact form => https://www.emailjs.com/docs/user-guide/adding-captcha-verification/
 function Contact() {
   const [name, setName] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [nameErr, setNameErr] = useState(false);
+  const [mobileNumberErr, setMobileNumberErr] = useState(false);
   const [emailErr, setEmailErr] = useState(false);
   const [messageErr, setMessageErr] = useState(false);
   const form = useRef();
@@ -29,6 +31,7 @@ function Contact() {
           setTimeout(function () {
             showResult(false);
             setName("");
+            setMobileNumber("");
             setEmail("");
             setMessage("");
           }, 3000);
@@ -50,6 +53,11 @@ function Contact() {
     } else {
       setNameErr(false);
     }
+    if (mobileNumber === "") {
+      setMobileNumberErr(true);
+    } else {
+      setMobileNumberErr(false);
+    }
     if (email === "") {
       setEmailErr(true);
     } else {
@@ -66,7 +74,7 @@ function Contact() {
     } else {
       setEmailErr(false);
     }
-    if (name !== "" && isValidEmail && message !== "") {
+    if (name !== "" && mobileNumber !== "" && isValidEmail && message !== "") {
       sendEmail();
     }
   }
@@ -100,6 +108,15 @@ function Contact() {
                 onChange={event => setName(event.target.value)}
               />
               {nameErr && <span className="sweet">Name should not be empty</span>}
+              <input
+                type="text"
+                className={`contact mobile ${mobileNumberErr ? "errorMessage" : ""}`}
+                placeholder="Your Mobile Number"
+                name="user_Mobile_Number"
+                value={mobileNumber}
+                onChange={event => setMobileNumber(event.target.value)}
+              />
+              {mobileNumberErr && <span className="sweet">Mobile number should not be empty</span>}
               <input
                 type="text"
                 name="user_email"
