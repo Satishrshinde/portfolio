@@ -30,7 +30,7 @@ const Project = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://react-app-basic-32.herokuapp.com/todoapp"
+                  href="https://satishrshinde.github.io/todoapp"
                   className="linkText"
                 >
                   Click here
@@ -54,7 +54,7 @@ const Project = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://react-app-basic-32.herokuapp.com/grocery"
+                  href="https://satishrshinde.github.io/grocery"
                   className="linkText"
                 >
                   Click here
