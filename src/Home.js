@@ -13,7 +13,7 @@ const Home = () => {
       <div className="home__bg">
         <div className="header d__flex align__items__center pxy__30">
           <div className="logo">
-            <a href="#">
+            <a href="/home">
               <h1>Satish Shinde</h1>
             </a>
           </div>
