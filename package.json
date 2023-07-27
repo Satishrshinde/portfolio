@@ -16,7 +16,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "typescript": "4.9.5",
     "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "cross-env NODE_ENV=production react-scripts build",
